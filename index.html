@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Shopping cart</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-11 mx-auto">
+                <div class="row mt-5 gx-3">
+                    <!-- left -->
+                    <div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow">
+                        <div class="card p-4">
+                            <h2 class="py-4 font-weight-bold">Cart (2 Items)</h2>
+                            <div class="row">
+                                <div
+                                    class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+                                    <img src="/img/Awt.jpg" alt="watch" class="img-fluid">
+                                </div>
+                                <!-- product view -->
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        <!-- productname -->
+                                        <div class="col-6 card-title">
+                                            <h2 class="mb-4 product_name">Minimalist Watch</h2>
+                                            <p class="mb-2">TYPE:Accesories</p>
+                                            <p class="mb-2">WATCH:Analog</p>
+                                            <p class="mb-2">BRAND:MVMT</p>
+                                        </div>
+
+                                        <!-- inc dec -->
+                                        <div class="col-6">
+                                            <ul class="pagination justify-content-end set_quantity">
+
+                                                <li class="page-item"><button class="page-link"
+                                                        onclick="decreaseNumber()"><i class="fas fa-minus"></i></button>
+                                                </li>
+                                                <li class="page-item"><input type="text" name="" id="text-bok"
+                                                        class="page-link" value="1"></li>
+                                                <li class="page-item"><button class="page-link"
+                                                        onclick="increaseNumber()"><i class="fas fa-plus"></i></button>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- remove eedit functionality -->
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_list">
+                                            <p><i class="fas fa-minus-square"></i>REMOVE ITEM</p>
+                                            <p><i class="fab fa-gratipay text-danger"></i>ADD TO WISHLISH</p>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end price_rs">
+                                            <h3 class="text-warning"><i class="fas fa-rupee-sign"></i><span>0.00</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2nd item -->
+                         <div class="card p-4">
+        
+                             <div class="row">
+                                 <div
+                                     class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+                                     <img src="/img/dell.jpg" alt="watch" class="img-fluid">
+                                 </div>
+                                 <!-- product view -->
+                                 <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                     <div class="row">
+                                         <!-- productname -->
+                                         <div class="col-6 card-title">
+                                             <h2 class="mb-4 product_name">Laptop</h2>
+                                             <p class="mb-2">TYPE:Electronic</p>
+                                             <p class="mb-2">LAPTOP:2 IN 1</p>
+                                             <p class="mb-2">BRAND:DELL</p>
+                                         </div>
+
+                                         <!-- inc dec -->
+                                         <div class="col-6">
+                                             <ul class="pagination justify-content-end set_quantity">
+
+                                                 <li class="page-item"><button class="page-link"
+                                                         onclick="decreaseNumber()"><i
+                                                             class="fas fa-minus"></i></button>
+                                                 </li>
+                                                 <li class="page-item"><input type="text" name="" id="text-bok"
+                                                         class="page-link" value="1"></li>
+                                                 <li class="page-item"><button class="page-link"
+                                                         onclick="increaseNumber()"><i class="fas fa-plus"></i></button>
+                                                 </li>
+
+                                             </ul>
+                                         </div>
+                                     </div>
+                                     <!-- remove eedit functionality -->
+                                     <div class="row">
+                                         <div class="col-8 d-flex justify-content-between remove_list">
+                                             <p><i class="fas fa-minus-square"></i>REMOVE ITEM</p>
+                                             <p><i class="fab fa-gratipay text-danger"></i>ADD TO WISHLISH</p>
+                                         </div>
+                                         <div class="col-4 d-flex justify-content-end price_rs">
+                                             <h3 class="text-warning"><i class="fas fa-rupee-sign"></i><span>0.00</span>
+                                             </h3>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                    </div>
+                    <!-- right panel -->
+                    <div class="col-md-12 col-lg-4 col-11 ax-auto mt-lg-0 mt-md-5">
+                        <div class="right_panel p-3 shadow bg-white">
+                            <h2 class="product_name mb-5 font-weight-bold text-secondary">Total Amout</h2>
+                            <div class="price_individual d-flex justify-content-between">
+                                <p class="text-muted">Product Price</p>
+                                <p><span>Rs. 0.00</span></p>
+                            </div>
+                             <div class="price_individual d-flex justify-content-between">
+                                 <p class="text-muted">Shipping Tax</p>
+                                 <p><span>Rs. 0.00</span></p>
+                             </div>
+                             <hr class="text-info" style="height: 2px;">
+                             <div class="total-amt d-flex justify-content-between font-weight-bold">
+                                 <p>Total Amount including Tax</p>
+                                 <p>Rs. <span class="text-info" id="total_cart_amt">0.00</span></p>
+                             </div>
+                             <button class="btn btn-outline-success text-uppercase font-weight-bold">Check Out</button>
+                        </div>
+                        <!-- coupon -->
+                        <div class="discount_code mt-3 shadow">
+                            <div class="card">
+                                <div class="card-body">
+                                    <a class="d-flex justify-content-between text-decoration-none" data-toggle="collapse"
+                                        href="#collapseExample" aria-expanded="false"
+                                        aria-controls="collapseExample">
+                                    Add Coupon Code
+                                    <span> <i class="fas fa-chevron-down"></i></span>
+                                    </a>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="mt-3">
+                                            <input type="text" name="" id="discount_code1" class="form-control font-weight-bold">
+                                            <small class="text-muted mt-3" id="error_trw">Code:DEB123</small>
+                                        </div>
+                                        <button class="btn btn-info btn-sm mt-3" onclick="discountCode()">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 shadow p-3 bg-light">
+                            <div class="pt-4">
+                                <h5 class="mb-4">Expected Delivery</h5>
+                                <p>3-7 August,2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
