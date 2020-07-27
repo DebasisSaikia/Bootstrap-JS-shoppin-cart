@@ -70,7 +70,7 @@ h2 {
 }
 
 .set_quantity::after {
-    content: "(Note, 1 piece)";
+    content: "1 pcs minimum";
     width: auto;
     height: auto;
     text-align: center;
